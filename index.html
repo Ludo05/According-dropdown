@@ -3,31 +3,77 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <script src="index.js"></script>
+    <script type="module" src="index.js"></script>
+    <script type="module" src="api.js"></script>
     <link rel="stylesheet" href="./index.css"/>
 </head>
 <body>
 <h2>Accordion</h2>
-<div id="test">
-<button onclick="clickMe()">Add Me</button>
-<button onclick="reply_click(this.id)">Remove Me</button>
-<button class="accordion">Favourite colour</button>
-<div class="panel">
-        <select>
-            <option value="red">Red</option>
-        </select>
-    <select>
-        <option value="green">Blue</option>
-    </select> <select>
-    <option value="blue">Green</option>
-</select> <select>
-    <option value="orange">Yellow</option>
-</select>
-</div>
-    <div class="panel">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+<div id="test-div"></div>
+<div id="form-container">
+<!--<button onclick="reply_click(this.id)">Remove Me</button>-->
+    <div>
+<button class="accordion">Child 1</button>
+        <div class="custom-selectee" style="width:200px;">
+            <form>
+            <input type="text">
+            <select id="favColour" required>
+                <option value="1">Audi</option>
+                <option value="2">BMW</option>
+                <option value="3">Citroen</option>
+                <option value="4">Ford</option>
+                <option value="5">Honda</option>
+                <option value="6">Jaguar</option>
+                <option value="7">Land Rover</option>
+                <option value="8">Mercedes</option>
+                <option value="9">Mini</option>
+                <option value="10">Nissan</option>
+                <option value="11">Toyota</option>
+                <option value="12">Volvo</option>
+            </select>
+            <select required>
+                <option value="1">Audi</option>
+                <option value="2">BMW</option>
+                <option value="3">Citroen</option>
+                <option value="4">Ford</option>
+                <option value="5">Honda</option>
+                <option value="6">Jaguar</option>
+                <option value="7">Land Rover</option>
+                <option value="8">Mercedes</option>
+                <option value="9">Mini</option>
+                <option value="10">Nissan</option>
+                <option value="11">Toyota</option>
+                <option value="12">Volvo</option>
+            </select>
+            <select required>
+                <option value="1">Audi</option>
+                <option value="2">BMW</option>
+                <option value="3">Citroen</option>
+                <option value="4">Ford</option>
+                <option value="5">Honda</option>
+                <option value="6">Jaguar</option>
+                <option value="7">Land Rover</option>
+                <option value="8">Mercedes</option>
+                <option value="9">Mini</option>
+                <option value="10">Nissan</option>
+                <option value="11">Toyota</option>
+                <option value="12">Volvo</option>
+            </select>
+            <input type="date" name="dob">
+            </form>
+
+        </div>
     </div>
 </div>
+<p id="favColourText"></p>
+<button onclick="addChild()">Add Child +</button>
+<button onclick="getValue()">Click</button>
 
+
+<form method="get" name="myform"  onclick="javascript:name()">
+    <button type="submit">
+        Let's do it
+    </button>
+</form>
 </body>
 </html>
